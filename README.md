@@ -1,2 +1,3 @@
-# purl-pugh
-This Github Pages serves content to purlpugh.com
+# pearl-pugh
+
+This Github Pages serves content to https://pearlpugh.com
