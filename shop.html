@@ -105,13 +105,13 @@
 				<h5 style="text-align: center;">Different, But I Am Here Book</h5><br>
 				<div class="row">
 					
-					<div class="form-group col-md-6">
+					<div class="form-group col-md-3">
 						<a href="#" class="pop">
 							<img src="img/products/book.png" style="width: 400px; height: 264px;">
 						</a>
 					</div>
 				
-					<div class="form-group col-md-3">
+					<div class="form-group col-md-4">
 						<div class="checkout">	
 							<h6>Book</h6>
 							<p class="price" >$16.95</p>
@@ -120,7 +120,7 @@
 							<h6 class="total">Total: $<span id="total-nonsigned">0</span></h6>
 						</div>
 					</div>
-					<div class="form-group col-md-3">
+					<div class="form-group col-md-5">
 						<div class="checkout">	
 							<h6>Signed Copy</h6>
 							<p class="price">$23.00</p>
@@ -134,12 +134,12 @@
 				<hr>
 				<h5 style="text-align: center;">Mask</h5><br>
 				<div class="row">
-					<div class="form-group col-md-6">
+					<div class="form-group col-md-3">
 						<a href="#" class="pop">
 							<img src="img/products/mask.png" style="width: 400px; height: 264px;">
 						</a>
 					</div>
-					<div class="form-group col-md-6">
+					<div class="form-group col-md-9">
 						<div class="checkout">	
 							<p class="price" >$18</p>
 							<p class="description">Quantity:</p>
@@ -151,108 +151,36 @@
 				<hr>
 				<h5 style="text-align: center;">T-Shirt</h5><br>
 				<div class="row">
-					<div class="form-group col-md-6">
+					<div class="form-group col-md-3">
 						<a href="#" class="pop">
 							<img src="img/products/tshirt.png" style="width: 400px; height: 264px;">
 						</a>
 					</div>
-					<div class="form-group col-md-3">
-						<div class="checkout">	
-							<h6>Men (Crew Neck)</h6>
-							<p class="price" >$28.00</p>
-							<label for="men-size">Size</label>
-							<select class="form-control size-select" id="men-size" name="men-tshirt-size">
-								<option>S</option>
-								<option>M</option>
-								<option>L</option>
-								<option>XL</option>
-								<option>2XL</option>
-							</select>
-							<p class="description">Quantity:</p>
-							<input type="number" class="quantity" name="men-tshirt-qty" data-price="28.00" data-totalid="total-men-tshirt" value="0"/><br><br>
-							<h6 class="total">Total: $<span id="total-men-tshirt">0</span></h6>
-						</div>
-					</div>
-					<div class="form-group col-md-3">
-						<div class="checkout">
-							<h6>Women (v-Neck)</h6>
-							<p class="price">$27.00</p>
-							<label for="women-size">Size</label>
-							<select class="form-control size-select" id="women-size" name="women-tshirt-size">
-								<option>S</option>
-								<option>M</option>
-								<option>L</option>
-								<option>XL</option>
-								<option>2XL</option>
-							</select>
-							<p class="description">Quantity:</p>
-							<input type="number" class="quantity" name="women-tshirt-qty" data-totalid="total-women-tshirt" data-price="27.00" value="0"/><br><br>
-							<h6 class="total">Total: $<span id="total-women-tshirt">0</span></h6>
+					<div class="form-group col-md-9">
+						<a id="add-more" class="site-btn btn-line mr-4 mb-2 btn btn-info btn-lg">
+							<span class="glyphicon glyphicon-plus"></span> Add More T-Shirts 
+						  </a>
+						<div class="table table-responsive">
+							<table class="table table-responsive table-striped table-bordered" style="width:100% " >
+							<thead>
+								<tr>
+									<th style="width: 16.6%;">Type</th>
+									<th style="width: 16.6%;">Size</th>
+									<th style="width: 16.6%;">Enter the Quantity</th>
+									<th style="width: 16.6%;">Price</th>
+									<th style="width: 16.6%;">Total</th>
+									<th style="width: 16.6%;">Remove</th>
+								</tr>
+							</thead>
+							<tbody id="TextBoxContainer">
+							</tbody>
+							</table>
+							<input id="table-subtotal-hidden" type="hidden" value="0">
 						</div>
 					</div>
 				</div>
-				<div class="row">
-					<div class="form-group col-md-6">
-					</div>
-					<div class="form-group col-md-3">
-						<div class="checkout">	
-							<h6>Youth</h6>
-							<p class="price">$23.00</p>
-							<label for="youth-size">Size</label>
-							<select class="form-control size-select" id="youth-size" name="youth-tshirt-size">
-								<option>S</option>
-								<option>M</option>
-								<option>L</option>
-							</select>
-							<p class="description">Quantity:</p>
-							<input type="number" class="quantity" name="youth-tshirt-qty" data-totalid="total-youth-tshirt" data-price="23.00" value="0"/><br><br>
-							<h6 class="total">Total: $<span id="total-youth-tshirt">0</span></h6>
-						</div>
-					</div>
-
-					<div class="form-group col-md-3">
-						<div class="checkout">	
-							<h6>Onesies</h6>
-							<p class="price">$20.00</p>
-							<label for="onesie-size">Size</label>
-							<select class="form-control size-select" id="onesie-size" name="onesie-size">
-								<option>0-3 months</option>
-								<option>3-6 months</option>
-								<option>3-9 months</option>
-								<option>9-12 months</select>
-							<p class="description">Quantity:</p>
-							<input type="number" class="quantity" name="onesie-size-qty" data-totalid="total-onesies-tshirt" data-price="20.00" value="0"/><br><br>
-							<h6 class="total">Total: $<span id="total-onesies-tshirt">0</span></h6>
-						</div>
-					</div>
-				</div>
-					<div class="row">
-						<div class="form-group col-md-3">
-						
-						</div>
-						<div class="form-group col-md-9">
-							<a id="add-more" class="site-btn btn-line mr-4 mb-2 btn btn-info btn-lg">
-								<span class="glyphicon glyphicon-plus"></span> Add More T-Shirts 
-							  </a>
-							<div class="table table-responsive">
-								<table class="table table-responsive table-striped table-bordered" style="width:100% " >
-								<thead>
-									<tr>
-										<th style="width: 20%;">Type</th>
-										<th style="width: 20%;">Size</th>
-										<th style="width: 20%;">Enter the Quantity</th>
-										<th style="width: 20%;">Total</th>
-										<th style="width: 20%;">Remove</th>
-									</tr>
-								</thead>
-								<tbody id="TextBoxContainer">
-								</tbody>
-								</table>
-								<input id="table-subtotal-hidden" type="hidden" value="0">
-							</div>
-						</div>
-					</div>
-
+				
+					
 				
 				
 				<!--Final Total price-->

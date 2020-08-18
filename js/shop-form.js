@@ -58,6 +58,11 @@ $(document).on('change','.item-table',function(){
     var newId = id.slice(-1);
     $("#table-total-"+newId).text('0');
     $("#table-qty-input-"+newId).val(0);
+   
+    var newselectoption = selectValue.slice(-1);
+    var pricing =[28, 27,23, 20];
+    var price = pricing[newselectoption-1];
+    $('#table-price-'+newId).text(price);
     
 });
 
@@ -74,6 +79,7 @@ $(document).on('keyup','.quantity-table',function(){
         'Option 4': 20
       };
       var price = pricing[selectValue];
+    //  $('#table-price-'+id).text(price);
       var totalTable = (price * quantity).toFixed(2);
       $("#table-total-"+id).text(totalTable);
       var tableSubtotal = parseFloat($('#table-subtotal-hidden').val()) + parseFloat(totalTable);
@@ -84,15 +90,14 @@ $(document).on('keyup','.quantity-table',function(){
 
     }else{
       alert('Please Select the T-shirt Type and Size!');
+     
     }
 
   })
 
   function updateTotalPrice(){
     var subTotal = parseFloat($('#total-signed').html()) + parseFloat($('#total-nonsigned').html()) +
-                    parseFloat($('#total-mask').html()) + parseFloat($('#total-men-tshirt').html()) + 
-                    parseFloat($('#total-women-tshirt').html()) + parseFloat($('#total-youth-tshirt').html()) +
-                    parseFloat($('#total-onesies-tshirt').html()) + parseFloat($('#table-subtotal-hidden').val());
+                    parseFloat($('#total-mask').html())  + parseFloat($('#table-subtotal-hidden').val());
    if(subTotal>0){
       var taxes = parseFloat(0.06*subTotal).toFixed(2);
       var total = (parseFloat(subTotal) + parseFloat(taxes) + parseFloat(8.25)).toFixed(2);
@@ -110,6 +115,12 @@ $(document).on('keyup','.quantity-table',function(){
     }
   }
 $(document).ready(function(){
+  
+
+  setTimeout(function() {
+    $("#add-more").trigger("click");
+},10);
+
 
 	$(".checkout").on("keyup", ".quantity", function(){
 		var price = +$(this).data("price");
@@ -154,9 +165,11 @@ function GetDynamicTextBox(value) {
     '<option value="" disabled selected>Select</option>'+
     '</select>'+
     '</td>'+ '<td><input type="number" id="table-qty-input-'+value+'" data-productid="'+value+'" class="quantity-table" value="0"/></td>'
-    + '<input type="hidden" id="more-order-id-'+value+'" name="more-order-'+value+'" value=""/>'
+    +'<td>$<span id="table-price-'+value+'">0</span></td>'+ '<input type="hidden" id="more-order-id-'+value+'" name="more-order-'+value+'" value=""/>'
     + '<td>$<span id="table-total-'+value+'">0</span></td>'+
       '<td><button type="button" data-removeid="'+value+'" class="btn btn-danger remove"><i class="glyphicon glyphicon-remove-sign"></i></button></td>'
 }
+
+
  
 })
