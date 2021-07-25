@@ -243,9 +243,9 @@
 
 
                       <a href="/" itemprop="url" class="site-header__logo-link">
-                        <img class="small--hide" height="100px" src="files/logo (1).png" 
+                        <img class="small--hide" id="logo-fix" src="files/logo (1).png" 
                           alt="" itemprop="logo">
-                        <img class="medium-up--hide" src="files/logo (1).png" >
+                        <img class="medium-up--hide" id="logo-fi" src="files/logo (1).png" >
                       </a>
 
 
@@ -400,6 +400,22 @@
                           background-size: cover;
                           
                         }
+                         #logo-fix{
+                          height: 100px;
+                        }
+ #logo-fi{
+                          height: 70px;
+                        }
+                        @media only screen and (max-width: 600px) {
+   .hero__image--1582217643731 {
+                          background-position: top; center;
+height: 600px;
+width: 500px;
+                        }
+                        
+                       
+                      }
+                       
                       </style>
 
                       <div class="parallax-container">
@@ -678,7 +694,21 @@
               background-color: #DFB2A9;
             }
           </style>
+  <!-- <h1 style="text-align: center">Show Instagram Feed on your Website</h1>
+      <div id="instafeed-container"></div>
 
+
+
+  <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+  <script type="text/javascript">
+  var userFeed = new Instafeed({
+    get: 'user',
+    target: "instafeed-container",
+      resolution: 'low_resolution',
+    accessToken: 'YOUR_INSTAGRAM_ACCESS_TOKEN_GOES_HERE'
+  });
+  userFeed.run();
+  </script> -->
           <div class="newsletter-section newsletter-1582136283430">
             <div class="page-width text-center">
 
